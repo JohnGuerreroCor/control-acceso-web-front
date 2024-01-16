@@ -14,10 +14,7 @@
       <hr class="punteada" />
       <div class="row">
         <div class="col">
-          <h6 class="font-weight-bold text-white">
-            CONTROL DE ACCESO <br />
-            INICIO DE SESIÓN
-          </h6>
+          <small class="font-weight-bold text-white">CONTROL DE ACCESO</small>
         </div>
       </div>
     </div>
@@ -26,8 +23,8 @@
         <form form [formGroup]="formLogin">
           <div class="row">
             <div class="col">
-              <mat-form-field class="example-full-width">
-                <span matPrefix class="mr-2"
+              <mat-form-field class="example-full-width" appearance="outline">
+                <span matPrefix class="p-3"
                   ><i class="fa-solid fa-user"></i
                 ></span>
                 <mat-label>Usuario</mat-label>
@@ -44,8 +41,8 @@
           </div>
           <div class="row">
             <div class="col">
-              <mat-form-field class="example-full-width">
-                <span matPrefix class="mr-2"
+              <mat-form-field class="example-full-width" appearance="outline">
+                <span matPrefix class="p-3"
                   ><i class="fa-solid fa-envelope"></i
                 ></span>
                 <mat-label>Correo</mat-label>
@@ -60,8 +57,8 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="row">
-            <div class="col mt-3 mb-4">
+          <div class="row mb-3">
+            <div class="col">
               <button
                 [disabled]="!formLogin.valid"
                 (click)="validarEmail()"
@@ -80,7 +77,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col mb-4">
+            <div class="col mb-2">
               <small
                 [routerLink]="['/instructivo']"
                 routerLinkActive="router-link-active"
