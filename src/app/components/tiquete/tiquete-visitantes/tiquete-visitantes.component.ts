@@ -355,7 +355,7 @@ export class TiqueteVisitantesComponent implements OnInit {
   buscarBloque(codigo: number) {
     this.formTercero.get('bloque')!.reset;
     this.ubicacionService.buscarBloques(codigo).subscribe((data) => {
-      console.log('BLOQUE:: ',data);
+      console.log('BLOQUE:: ', data);
       this.bloques = data;
     });
   }

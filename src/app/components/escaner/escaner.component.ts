@@ -8,15 +8,9 @@ import { FotoAntigua } from '../../models/foto-antigua';
 import { AuthService } from '../../services/auth.service';
 import { PoliticaService } from '../../services/politica.service';
 import { PoliticaEstamento } from '../../models/politica-estamento';
-import { FirmaDigitalService } from '../../services/firma-digital.service';
 import { Router } from '@angular/router';
 import { BehaviorSubject, fromEvent, Observable, Subscription } from 'rxjs';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { Graduado } from 'src/app/models/graduado';
 import { GraduadoService } from 'src/app/services/graduado.service';
@@ -106,9 +100,6 @@ export class EscanerComponent implements OnInit {
   foto: FotoAntigua = {
     url: '',
   };
-  firma: FotoAntigua = {
-    url: '',
-  };
 
   // Referencia al elemento div oculto
   @ViewChild('hiddenDiv') hiddenDiv!: ElementRef;
@@ -122,7 +113,6 @@ export class EscanerComponent implements OnInit {
     public tiketServie: TicketService,
     public fotoService: FotoService,
     public politicaService: PoliticaService,
-    public firmaService: FirmaDigitalService,
     private datePipe: DatePipe,
     private auth: AuthService,
     private formBuilder: FormBuilder,
